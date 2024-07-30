@@ -1,0 +1,251 @@
+/**
+ * Colors: Solid
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --wdt-c-white: #ffffff;
+  --wdt-c-black: #000000;
+  --wdt-c-primary: #348f6c;
+  --wdt-c-primary-light: #e5f7ee;
+}
+
+/**
+ * Colors: Palette
+ *
+ * The primitive colors used for accent colors. These colors are referenced
+ * by functional colors such as "Text", "Background", or "Brand".
+ *
+ * Each colors have exact same color scale system with 3 levels of solid
+ * colors with different brightness, and 1 soft color.
+ * 
+ * - `XXX-1`: The most solid color used mainly for colored text. It must
+ *   satisfy the contrast ratio against when used on top of `XXX-soft`.
+ *
+ * - `XXX-2`: The color used mainly for hover state of the button.
+ *
+ * - `XXX-3`: The color for solid background, such as bg color of the button.
+ *    It must satisfy the contrast ratio with pure white (#ffffff) text on
+ *    top of it.
+ *
+ * - `XXX-soft`: The color used for subtle background such as custom container
+ *    or badges. It must satisfy the contrast ratio when putting `XXX-1` colors
+ *    on top of it.
+ *
+ *    The soft color must be semi transparent alpha channel. This is crucial
+ *    because it allows adding multiple "soft" colors on top of each other
+ *    to create a accent, such as when having inline code block inside
+ *    custom containers.
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --wdt-c-gray-1: #dddde3;
+  --wdt-c-gray-2: #e4e4e9;
+  --wdt-c-gray-3: #ebebef;
+  --wdt-c-gray-soft: rgba(142, 150, 170, 0.14);
+
+  --wdt-c-indigo-1: #3451b2;
+  --wdt-c-indigo-2: #3a5ccc;
+  --wdt-c-indigo-3: #5672cd;
+  --wdt-c-indigo-soft: rgba(100, 108, 255, 0.14);
+
+  --wdt-c-green-1: #18794e;
+  --wdt-c-green-2: #299764;
+  --wdt-c-green-3: #30a46c;
+  --wdt-c-green-soft: rgba(16, 185, 129, 0.14);
+
+  --wdt-c-yellow-1: #915930;
+  --wdt-c-yellow-2: #946300;
+  --wdt-c-yellow-3: #9f6a00;
+  --wdt-c-yellow-soft: rgba(234, 179, 8, 0.14);
+
+  --wdt-c-red-1: #b8272c;
+  --wdt-c-red-2: #d5393e;
+  --wdt-c-red-3: #e0575b;
+  --wdt-c-red-soft: rgba(244, 63, 94, 0.14);
+}
+
+/**
+ * Colors: Background
+ *
+ * - `bg`: The bg color used for main screen.
+ *
+ * - `bg-alt`: The alternative bg color used in places such as "sidebar",
+ *   or "code block".
+ *
+ * - `bg-elv`: The elevated bg color. This is used at parts where it "floats",
+ *   such as "dialog".
+ *
+ * - `bg-soft`: The bg color to slightly ditinguish some components from
+ *   the page. Used for things like "carbon ads" or "table".
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --wdt-c-bg: #f6f7fc;
+  --wdt-c-bg-alt: linear-gradient(185deg, #57af8d 0%, #399371 51%, #257355 100%);
+  --wdt-c-bg-alt-sub: linear-gradient(191deg, #ffffff 0%, #f9f9f9 100%);
+  --wdt-c-bg-elv: #ffffff;
+  --wdt-c-bg-soft: #f6f6f7;
+}
+
+/**
+ * Colors: Borders
+ *
+ * - `divider`: This is used for separators. This is used to divide sections
+ *   within the same components, such as having separator on "h2" heading.
+ *
+ * - `border`: This is designed for borders on interactive components.
+ *   For example this should be used for a button outline.
+ *
+ * - `gutter`: This is used to divide components in the page. For example
+ *   the header and the lest of the page.
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --wdt-c-border: #c2c2c4;
+  --wdt-c-divider: #e2e2e3;
+  --wdt-c-gutter: #e2e2e3;
+}
+
+/**
+ * Colors: Text
+ *
+ * - `text-1`: Used for primary text.
+ *
+ * - `text-2`: Used for muted texts, such as "inactive menu" or "info texts".
+ *
+ * - `text-3`: Used for subtle texts, such as "placeholders" or "caret icon".
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --wdt-c-text: #606266;
+  --wdt-c-text-1: rgba(60, 60, 67);
+  --wdt-c-text-2: rgba(60, 60, 67, 0.78);
+  --wdt-c-text-3: rgba(60, 60, 67, 0.56);
+}
+
+/**
+ * Colors: Function
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --wdt-c-default-1: var(--wdt-c-gray-1);
+  --wdt-c-default-2: var(--wdt-c-gray-2);
+  --wdt-c-default-3: var(--wdt-c-gray-3);
+  --wdt-c-default-soft: var(--wdt-c-gray-soft);
+
+  --wdt-c-brand-1: var(--wdt-c-indigo-1);
+  --wdt-c-brand-2: var(--wdt-c-indigo-2);
+  --wdt-c-brand-3: var(--wdt-c-indigo-3);
+  --wdt-c-brand-soft: var(--wdt-c-indigo-soft);
+
+  --wdt-c-tip-1: var(--wdt-c-brand-1);
+  --wdt-c-tip-2: var(--wdt-c-brand-2);
+  --wdt-c-tip-3: var(--wdt-c-brand-3);
+  --wdt-c-tip-soft: var(--wdt-c-brand-soft);
+
+  --wdt-c-warning-1: var(--wdt-c-yellow-1);
+  --wdt-c-warning-2: var(--wdt-c-yellow-2);
+  --wdt-c-warning-3: var(--wdt-c-yellow-3);
+  --wdt-c-warning-soft: var(--wdt-c-yellow-soft);
+
+  --wdt-c-danger-1: var(--wdt-c-red-1);
+  --wdt-c-danger-2: var(--wdt-c-red-2);
+  --wdt-c-danger-3: var(--wdt-c-red-3);
+  --wdt-c-danger-soft: var(--wdt-c-red-soft);
+}
+
+/**
+ * Typography
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --wdt-font-family-base: 'Chinese Quotes', 'Inter var', 'Inter', ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --wdt-font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
+}
+
+/**
+ * Shadows
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --wdt-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --wdt-shadow-2: 0 3px 12px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.07);
+  --wdt-shadow-3: 0 12px 32px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08);
+  --wdt-shadow-4: 0 14px 44px rgba(0, 0, 0, 0.12), 0 3px 9px rgba(0, 0, 0, 0.12);
+  --wdt-shadow-5: 0 18px 56px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.16);
+}
+
+/**
+ * Z-indexes
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --wdt-z-index-footer: 10;
+  --wdt-z-index-local-nav: 20;
+  --wdt-z-index-nav: 30;
+  --wdt-z-index-layout-top: 40;
+  --wdt-z-index-backdrop: 50;
+  --wdt-z-index-sidebar: 60;
+}
+
+/**
+ * Layouts
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --wdt-layout-min-width: 320px;
+  --wdt-layout-max-width: 1440px;
+}
+
+/**
+ * Component: Header Anchor
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --wdt-header-header-height: 88px;
+}
+
+/**
+ * Component: Nav
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --wdt-nav-height: 64px;
+  --wdt-nav-bg-color: #f7fffb;
+  --wdt-nav-screen-bg-color: var(--wdt-c-bg);
+  --wdt-nav-logo-height: 24px;
+}
+
+/**
+ * Component: Sidebar
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --wdt-sidebar-bg-color: var(--wdt-c-bg-alt);
+  --wdt-sidebar-super-width: 72px;
+  --wdt-sidebar-super-border-radius: 24px;
+  --wdt-sidebar-sub-width: 188px;
+  --wdt-sidebar-sub-color: var(--wdt-c-text);
+  --wdt-sidebar-sub-bg-color: var(--wdt-c-bg-alt-sub);
+  --wdt-sidebar-sub-child-width: 934px;
+}
+
+/**
+ * Component: Footer
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --wdt-footer-bg-color: var(--wdt-c-bg-alt);
+  --wdt-footer-height: 32px;
+}
+
+/**
+ * Colors Backdrop
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --wdt-backdrop-bg-color: rgba(0, 0, 0, 0.6);
+}
