@@ -1,3 +1,8 @@
+```bush
+npm i
+npm run micro
+```
+
 # 基座: vue3+vite5+micro-app:1.0.0-rc.6
 
 子应用使用饿了么 UI 组件库中的 el-select,el-table 中 filter 属性的四种情况表现:
