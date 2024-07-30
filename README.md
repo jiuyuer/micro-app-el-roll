@@ -1,33 +1,27 @@
-# micro-app-demo
+# 基座: vue3+vite5+micro-app:1.0.0-rc.6
 
-This template should help get you started developing with Vue 3 in Vite.
+子应用使用饿了么 UI 组件库中的 el-select,el-table 中 filter 属性的四种情况表现:
 
-## Recommended IDE Setup
+## 情况 1，基座是 frame 沙箱，micro-app 标签设置成 position: relative
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+vue2 表现：el-select 正常，el-table 的 filter 有问题(点击展示后定位问题出错，第二次点击时发生)
 
-## Type Support for `.vue` Imports in TS
+vue3 表现正常
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## 情况 2，基座是 frame 沙箱，micro-app 标签设置成 position: unset
 
-## Customize configuration
+vue2 表现：el-select,el-table 的 filter 滚动浏览器时，弹土框均跟随滚动
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+vue3 表现：el-select,eltable 的 filter 液动浏览器时，弹土框均跟随滚动
 
-## Project Setup
+## 情况 3，基座是 with 沙箱，micro-app 标签设置成 position: unset
 
-```sh
-npm install
-```
+vue2 表现正常
 
-### Compile and Hot-Reload for Development
+vue3 略
 
-```sh
-npm run dev
-```
+## 情况 4，基座是 with 沙箱，micro-app 标签设置成 position: relative
 
-### Type-Check, Compile and Minify for Production
+vue2 表现：el-select 正常，el-table 的 filter 有问题(点击展示后定位问题出错，第二次点击时发生)
 
-```sh
-npm run build
-```
+vue3 略
