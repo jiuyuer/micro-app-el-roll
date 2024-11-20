@@ -20,6 +20,11 @@ const microRoutes = [
     component: () => import('../views/demo.vue')
   },
   {
+    path: '/vue3/vue3-demo-window',
+    name: 'demo-window',
+    component: () => import('../views/demo-window.vue')
+  },
+  {
     path: '/app-menu',
     name: 'appmenu',
     redirect: '/app-menu/app-sub',

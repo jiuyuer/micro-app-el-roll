@@ -7,6 +7,7 @@ import { RouterLink, RouterView } from 'vue-router';
     <RouterLink to="/">home</RouterLink>
     <RouterLink to="/vue2/vue2-demo">vue2-demo</RouterLink>
     <RouterLink to="/vue3/vue3-demo">vue3-demo</RouterLink>
+    <RouterLink to="/vue3/vue3-demo-window">vue3-demo-window</RouterLink>
   </nav>
   <main class="main">
     <RouterView />
